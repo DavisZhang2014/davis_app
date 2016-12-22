@@ -1,0 +1,44 @@
+<{include file="../Public/header.html"}>
+<{include file="../Public/menu.html"}>
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="span12">
+			<h3 class="page-title">Managed Tables <small>managed table samples</small></h3>
+		</div>
+	</div>
+	
+	<div class="portlet box light-grey">
+		<div class="portlet-body">
+			<div class="clearfix">
+				
+			</div>
+			<table class="table table-striped table-bordered table-hover" id="sample_1">
+				<thead>
+					<tr>
+						<th style="width:8px;">
+							<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+						</th>	
+						<th>ID</th>	
+						<th class="hidden-480">名称</th>	
+						<th class="hidden-480">添加时间</th>	
+						<th class="hidden-480">最近修改时间</th>	
+						<th >操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<{foreach from=$list item=item name=loop}>
+						<tr class="odd gradeX">
+							<td><input type="checkbox" class="checkboxes" value="1" /></td>
+							<td><{$item.ID}></td>
+							<td class="hidden-480"><a href="mailto:shuxer@gmail.com"><{$item.Name}></a></td>
+							<td class="hidden-480"><{$item.AddTime}></td>
+							<td class="center hidden-480"><{$item.LastUpdateTime}></td>
+							<td ><a href="<{$__MODEL__}>/edit/ID/<{$item.ID}>">编辑</span></td>
+						</tr>
+					<{/foreach}>
+				</tbody>				
+			</table>	
+		</div>
+	</div>
+</div>
+<{include file="../Public/footer.html"}>
