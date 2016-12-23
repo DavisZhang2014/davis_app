@@ -7,8 +7,8 @@ if (!defined('IN_DS')) {
 
 
 // set cache
-//$cacheFileName = MEM_PREX . 'index';
-//$objCache = new Cache($cacheFileName);
+$cacheFileName = MEM_PREX . 'index';
+$objCache = new Cache($cacheFileName);
 
 // if (DEBUG_MODE || isset($_GET['forcerefresh']))
 //     $mainContent = '';
